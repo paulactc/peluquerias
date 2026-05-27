@@ -1,0 +1,218 @@
+/* ─── Loading ─────────────────────────────────────── */
+.sp-loading {
+  display: flex; align-items: center; justify-content: center;
+  min-height: 100vh; font-size: 1.1rem; color: #78716c;
+}
+
+/* ─── Root ─────────────────────────────────────────── */
+.sp-root { min-height: 100vh; display: flex; flex-direction: column; font-family: 'Inter', sans-serif; }
+
+/* ─── Hero ─────────────────────────────────────────── */
+.sp-hero {
+  position: relative;
+  min-height: 380px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: flex-end;
+}
+.sp-hero-overlay {
+  position: absolute; inset: 0;
+}
+.sp-hero-content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2.5rem 2rem;
+  color: #fff;
+}
+.sp-logo {
+  width: 90px; height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid rgba(255,255,255,.6);
+  margin-bottom: 1rem;
+  display: block;
+}
+.sp-logo-placeholder {
+  width: 90px; height: 90px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 2.5rem;
+  border: 3px solid rgba(255,255,255,.4);
+  margin-bottom: 1rem;
+}
+.sp-hero-content h1 {
+  font-size: 2.4rem;
+  font-weight: 800;
+  margin-bottom: .4rem;
+  text-shadow: 0 2px 8px rgba(0,0,0,.3);
+}
+.sp-hero-address { font-size: .95rem; opacity: .9; margin-bottom: 1rem; }
+
+.sp-hero-socials { display: flex; flex-wrap: wrap; gap: .6rem; }
+.sp-social-btn {
+  display: inline-flex; align-items: center; gap: .3rem;
+  padding: .4rem .9rem;
+  background: rgba(255,255,255,.2);
+  backdrop-filter: blur(4px);
+  border-radius: 9999px;
+  font-size: .82rem;
+  font-weight: 600;
+  color: #fff;
+  border: 1px solid rgba(255,255,255,.35);
+  transition: background .15s;
+  text-decoration: none;
+}
+.sp-social-btn:hover { background: rgba(255,255,255,.35); }
+
+/* ─── Nav ──────────────────────────────────────────── */
+.sp-nav {
+  background: #fff;
+  border-bottom: 3px solid;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 0 2rem;
+  height: 52px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(0,0,0,.06);
+}
+.sp-nav-back  { font-size: .85rem; color: #78716c; margin-right: auto; }
+.sp-nav-back:hover { color: #1c1917; }
+.sp-nav-link  { font-size: .88rem; font-weight: 600; text-decoration: none; }
+.sp-nav-cta {
+  padding: .4rem 1rem;
+  border-radius: 9999px;
+  color: #fff !important;
+  font-size: .85rem;
+}
+
+/* ─── Main ─────────────────────────────────────────── */
+.sp-main { flex: 1; max-width: 900px; margin: 0 auto; padding: 2.5rem 1.5rem; width: 100%; }
+.sp-section { margin-bottom: 3rem; }
+.sp-section h2 { font-size: 1.5rem; font-weight: 700; margin-bottom: 1.2rem; }
+.sp-empty { color: #78716c; }
+
+/* ─── About ────────────────────────────────────────── */
+.sp-about p {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: #44403c;
+  max-width: 680px;
+}
+
+/* ─── Servicios ────────────────────────────────────── */
+.sp-services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1rem;
+}
+.sp-service-card {
+  background: #fff;
+  border: 2px solid #e7e5e4;
+  border-radius: 1rem;
+  padding: 1.3rem;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: .4rem;
+  transition: border-color .15s, box-shadow .15s, transform .1s;
+}
+.sp-service-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,.08); transform: translateY(-2px); }
+.sp-service-card.selected { box-shadow: 0 4px 16px rgba(0,0,0,.12); }
+.sp-service-top { display: flex; justify-content: space-between; align-items: flex-start; }
+.sp-service-name  { font-weight: 700; font-size: .95rem; }
+.sp-service-price { font-weight: 800; font-size: 1rem; white-space: nowrap; }
+.sp-service-desc  { font-size: .82rem; color: #78716c; line-height: 1.5; }
+.sp-service-duration { font-size: .8rem; color: #a8a29e; margin-top: .2rem; }
+.sp-service-check { font-size: .82rem; font-weight: 700; margin-top: .3rem; }
+
+/* ─── Equipo ───────────────────────────────────────── */
+.sp-staff-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+}
+.sp-staff-card {
+  background: #fff;
+  border: 1px solid #e7e5e4;
+  border-radius: 1rem;
+  padding: 1.4rem 1.8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .4rem;
+  min-width: 140px;
+}
+.sp-staff-photo {
+  width: 72px; height: 72px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: .3rem;
+}
+.sp-staff-avatar {
+  width: 72px; height: 72px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: .3rem;
+}
+.sp-staff-card strong { font-size: .95rem; }
+.sp-staff-role { font-size: .8rem; color: #78716c; }
+
+/* ─── CTA ──────────────────────────────────────────── */
+.sp-cta-section { }
+.sp-cta-box {
+  border: 2px solid;
+  border-radius: 1.2rem;
+  padding: 2.5rem;
+  text-align: center;
+  background: #fff;
+}
+.sp-cta-box h2 { font-size: 1.6rem; font-weight: 700; margin-bottom: .5rem; }
+.sp-cta-box p  { color: #78716c; margin-bottom: .75rem; }
+.sp-cta-selected {
+  background: #f0fdf4; color: #166534;
+  padding: .5rem 1rem; border-radius: .5rem;
+  font-size: .9rem; display: inline-block; margin-bottom: 1rem;
+}
+.sp-cta-hint {
+  font-size: .85rem; color: #a8a29e !important; margin-bottom: 1rem;
+}
+.sp-cta-btn {
+  display: inline-block;
+  color: #fff;
+  padding: .8rem 2rem;
+  border-radius: 9999px;
+  font-size: 1rem;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  transition: opacity .15s, transform .1s;
+}
+.sp-cta-btn:hover   { opacity: .88; }
+.sp-cta-btn:active  { transform: scale(.97); }
+.sp-cta-btn:disabled { opacity: .4; cursor: not-allowed; }
+
+/* ─── Footer ───────────────────────────────────────── */
+.sp-footer {
+  color: rgba(255,255,255,.85);
+  text-align: center;
+  padding: 1.5rem;
+  font-size: .85rem;
+  line-height: 1.8;
+}
+
+@media (max-width: 600px) {
+  .sp-hero-content h1 { font-size: 1.7rem; }
+  .sp-nav { gap: .8rem; padding: 0 1rem; }
+  .sp-main { padding: 1.5rem 1rem; }
+  .sp-cta-box { padding: 1.5rem 1rem; }
+}
