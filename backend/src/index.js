@@ -9,6 +9,7 @@ app.use(express.json());
 
 // Rutas
 app.use('/api/auth',         require('./routes/auth'));
+app.use('/api/superadmin',   require('./routes/superadmin'));
 app.use('/api/salons',       require('./routes/salons'));
 app.use('/api/services',     require('./routes/services'));
 app.use('/api/staff',        require('./routes/staff'));

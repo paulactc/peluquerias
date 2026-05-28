@@ -20,7 +20,7 @@ export default function BookingPage() {
   const [selSlot, setSelSlot]     = useState(null);
   const [loadingSlots, setLoadingSlots] = useState(false);
 
-  const [form, setForm] = useState({ client_name: '', client_email: '', client_phone: '', notes: '' });
+  const [form, setForm] = useState({ client_name: '', client_apellidos: '', client_phone: '' });
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState('');
 
@@ -42,7 +42,8 @@ export default function BookingPage() {
   const handleSubmit = async e => {
     e.preventDefault();
     if (!selSlot) return setError('Selecciona una hora');
-    if (!form.client_name || !form.client_email) return setError('Nombre y email son obligatorios');
+    if (!form.client_name || !form.client_apellidos || !form.client_phone)
+      return setError('Nombre, apellidos y teléfono son obligatorios');
     setError('');
     setSubmitting(true);
     try {
@@ -125,16 +126,12 @@ export default function BookingPage() {
                 <input value={form.client_name} onChange={e => setForm({...form, client_name: e.target.value})} placeholder="Tu nombre" />
               </div>
               <div className="form-group">
-                <label>Email *</label>
-                <input type="email" value={form.client_email} onChange={e => setForm({...form, client_email: e.target.value})} placeholder="correo@ejemplo.com" />
+                <label>Apellidos *</label>
+                <input value={form.client_apellidos} onChange={e => setForm({...form, client_apellidos: e.target.value})} placeholder="Tus apellidos" />
               </div>
               <div className="form-group">
-                <label>Teléfono</label>
+                <label>Teléfono *</label>
                 <input value={form.client_phone} onChange={e => setForm({...form, client_phone: e.target.value})} placeholder="600 000 000" />
-              </div>
-              <div className="form-group">
-                <label>Notas (opcional)</label>
-                <textarea rows={2} value={form.notes} onChange={e => setForm({...form, notes: e.target.value})} placeholder="Alguna preferencia..." />
               </div>
 
               {selSlot && (

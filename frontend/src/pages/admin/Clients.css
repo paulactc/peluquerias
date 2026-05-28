@@ -1,0 +1,55 @@
+.clients-search input {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1.5px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+.clients-search input:focus {
+  outline: none;
+  border-color: var(--primary, #7c3aed);
+}
+
+.clients-table-wrap {
+  overflow-x: auto;
+}
+
+.clients-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: .9rem;
+}
+
+.clients-table th {
+  background: #f5f3ff;
+  color: #4c1d95;
+  font-weight: 700;
+  padding: 12px 14px;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.clients-table td {
+  padding: 12px 14px;
+  border-bottom: 1px solid #f3f4f6;
+  vertical-align: top;
+}
+
+.clients-table tr:last-child td { border-bottom: none; }
+
+.services-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.service-tag {
+  background: #ede9fe;
+  color: #4c1d95;
+  font-size: .78rem;
+  padding: 3px 9px;
+  border-radius: 99px;
+  white-space: nowrap;
+}

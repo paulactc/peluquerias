@@ -11,7 +11,7 @@ export default function Navbar() {
   return (
     <nav className="navbar">
       <Link to={isAuth ? '/admin' : '/'} className="navbar-brand">
-        ✂️ PeluqueríaSaaS
+        ✂️ Peluquería
       </Link>
       <div className="navbar-links">
         {isAuth ? (
@@ -19,6 +19,7 @@ export default function Navbar() {
             <span className="navbar-salon">{salon?.name}</span>
             <Link to="/admin">Panel</Link>
             <Link to="/admin/citas">Citas</Link>
+            <Link to="/admin/clientes">Clientes</Link>
             <Link to="/admin/servicios">Servicios</Link>
             <Link to="/admin/equipo">Equipo</Link>
             <Link to="/admin/perfil">Perfil</Link>

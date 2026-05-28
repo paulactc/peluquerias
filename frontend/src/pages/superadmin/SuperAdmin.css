@@ -1,0 +1,354 @@
+/* ── Super Admin Layout ───────────────────────────────────────────────────── */
+.super-login-wrap {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1e1b4b 0%, #4c1d95 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.super-login-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 40px;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 20px 60px rgba(0,0,0,.3);
+  text-align: center;
+}
+
+.super-login-icon {
+  font-size: 2.5rem;
+  margin-bottom: 8px;
+  color: #7c3aed;
+}
+
+.super-login-card h1 {
+  font-size: 1.5rem;
+  color: #1e1b4b;
+  margin: 0 0 4px;
+}
+
+.super-login-sub {
+  color: #6b7280;
+  font-size: .875rem;
+  margin-bottom: 24px;
+}
+
+.super-login-card .form-group {
+  text-align: left;
+  margin-bottom: 16px;
+}
+
+.super-login-card label {
+  display: block;
+  font-size: .85rem;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 4px;
+}
+
+.super-login-card input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1.5px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 1rem;
+  box-sizing: border-box;
+  transition: border-color .2s;
+}
+
+.super-login-card input:focus {
+  outline: none;
+  border-color: #7c3aed;
+}
+
+/* ── Shared button ─────────────────────────────────────────────────────────── */
+.super-btn {
+  width: 100%;
+  background: #7c3aed;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background .2s;
+}
+
+.super-btn:hover:not(:disabled) { background: #6d28d9; }
+.super-btn:disabled { opacity: .6; cursor: not-allowed; }
+
+/* ── Dashboard ─────────────────────────────────────────────────────────────── */
+.super-wrap {
+  min-height: 100vh;
+  background: #f5f3ff;
+}
+
+.super-header {
+  background: #1e1b4b;
+  padding: 0 32px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.super-header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.super-logo {
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: .5px;
+}
+
+.super-badge {
+  background: #7c3aed;
+  color: #fff;
+  font-size: .7rem;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 99px;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+}
+
+.super-logout {
+  background: transparent;
+  border: 1.5px solid rgba(255,255,255,.4);
+  color: #fff;
+  padding: 6px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: .85rem;
+  transition: background .2s;
+}
+
+.super-logout:hover { background: rgba(255,255,255,.1); }
+
+.super-main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 32px 24px;
+}
+
+.super-top {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.super-top h1 {
+  font-size: 1.6rem;
+  color: #1e1b4b;
+  margin: 0 0 4px;
+}
+
+.super-sub { color: #6b7280; font-size: .9rem; margin: 0; }
+
+.super-btn-new {
+  background: #7c3aed;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: .95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background .2s;
+  white-space: nowrap;
+}
+
+.super-btn-new:hover { background: #6d28d9; }
+
+/* ── Table ─────────────────────────────────────────────────────────────────── */
+.super-table-wrap {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,.06);
+  overflow-x: auto;
+}
+
+.super-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: .9rem;
+}
+
+.super-table th {
+  background: #ede9fe;
+  color: #4c1d95;
+  font-weight: 700;
+  padding: 12px 14px;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.super-table td {
+  padding: 12px 14px;
+  border-bottom: 1px solid #f3f4f6;
+  vertical-align: top;
+}
+
+.super-table tr:last-child td { border-bottom: none; }
+.super-table tr.row-inactive td { opacity: .5; }
+
+.cuenta-cell {
+  font-family: monospace;
+  font-size: .82rem;
+}
+
+.super-status {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 99px;
+  font-size: .78rem;
+  font-weight: 600;
+}
+
+.super-status.active   { background: #d1fae5; color: #065f46; }
+.super-status.inactive { background: #fee2e2; color: #991b1b; }
+
+.super-muted { color: #9ca3af; font-size: .9rem; padding: 16px 0; }
+
+/* ── Action buttons ────────────────────────────────────────────────────────── */
+.super-actions {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.super-btn-edit {
+  background: #ede9fe;
+  color: #4c1d95;
+  border: none;
+  border-radius: 6px;
+  padding: 5px 12px;
+  font-size: .82rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background .2s;
+}
+
+.super-btn-edit:hover { background: #ddd6fe; }
+
+.super-btn-danger {
+  background: #fee2e2;
+  color: #991b1b;
+  border: none;
+  border-radius: 6px;
+  padding: 5px 12px;
+  font-size: .82rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background .2s;
+}
+
+.super-btn-danger:hover { background: #fecaca; }
+
+.super-btn-cancel {
+  background: #f3f4f6;
+  color: #374151;
+  border: none;
+  border-radius: 6px;
+  padding: 5px 12px;
+  font-size: .82rem;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* ── Salon Form ────────────────────────────────────────────────────────────── */
+.super-form-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 28px;
+  margin-bottom: 24px;
+  box-shadow: 0 2px 12px rgba(0,0,0,.08);
+  border-left: 4px solid #7c3aed;
+}
+
+.super-form-card h2 {
+  font-size: 1.2rem;
+  color: #1e1b4b;
+  margin: 0 0 20px;
+}
+
+.super-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.super-form-grid .form-group {
+  margin: 0;
+}
+
+.super-form-grid .form-group label {
+  display: block;
+  font-size: .85rem;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 4px;
+}
+
+.super-form-grid .form-group input {
+  width: 100%;
+  padding: 9px 12px;
+  border: 1.5px solid #d1d5db;
+  border-radius: 8px;
+  font-size: .95rem;
+  box-sizing: border-box;
+  transition: border-color .2s;
+}
+
+.super-form-grid .form-group input:focus {
+  outline: none;
+  border-color: #7c3aed;
+}
+
+.full-width { grid-column: 1 / -1; }
+
+.super-note {
+  color: #6b7280;
+  font-size: .82rem;
+  background: #f5f3ff;
+  padding: 10px 14px;
+  border-radius: 6px;
+  margin: 0;
+}
+
+.super-error {
+  color: #dc2626;
+  font-size: .85rem;
+  background: #fef2f2;
+  padding: 8px 12px;
+  border-radius: 6px;
+  margin: 0;
+}
+
+.super-ok {
+  background: #d1fae5;
+  color: #065f46;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.super-form-actions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.super-form-actions .super-btn {
+  width: auto;
+  padding: 10px 28px;
+}

@@ -110,8 +110,8 @@ router.get('/slots', async (req, res) => {
 // ─── Crear cita (público) ─────────────────────────────────────────────────────
 // POST /api/appointments
 router.post('/', async (req, res) => {
-  const { slug, service_id, staff_id, client_name, client_phone, client_email, appt_date, appt_time, notes } = req.body;
-  if (!slug || !service_id || !client_name || !client_email || !appt_date || !appt_time)
+  const { slug, service_id, staff_id, client_name, client_apellidos, client_phone, client_email, appt_date, appt_time, notes } = req.body;
+  if (!slug || !service_id || !client_name || !client_apellidos || !client_phone || !appt_date || !appt_time)
     return res.status(400).json({ error: 'Faltan campos obligatorios' });
 
   try {
@@ -142,9 +142,9 @@ router.post('/', async (req, res) => {
 
     const [r] = await db.query(
       `INSERT INTO appointments
-        (salon_id, service_id, staff_id, client_name, client_phone, client_email, appt_date, appt_time, notes)
-       VALUES (?,?,?,?,?,?,?,?,?)`,
-      [salonId, service_id, staff_id || null, client_name, client_phone || null, client_email, appt_date, appt_time, notes || null]
+        (salon_id, service_id, staff_id, client_name, client_apellidos, client_phone, client_email, appt_date, appt_time, notes)
+       VALUES (?,?,?,?,?,?,?,?,?,?)`,
+      [salonId, service_id, staff_id || null, client_name, client_apellidos, client_phone, client_email || null, appt_date, appt_time, notes || null]
     );
 
     res.status(201).json({ id: r.insertId, message: '¡Cita reservada con éxito!' });
